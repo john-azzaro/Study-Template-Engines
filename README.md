@@ -1,11 +1,9 @@
 # Template Engines Study
 
 <br>
+
+## What is a template engine?
 A *template engine* allows you to replace variables in your files with acutal values, and then send the resulting HTML string to the clinet.  Express apps are capable of handling server-side template engines whihc can add data to a *view* and generate that HTML dynamically.
-
-Here's some questions covered in the study:
-
-
 
 <br>
 
@@ -25,17 +23,46 @@ There are wide range of templating engines for Node.js. More templating engines 
 ### What is Pug?
 -----------------
 
-**Pug** is a HTML templating engine for Node.js which essentially means you can write much simpler Pug code and the Pug compiler will compile that into HTML code that the browser can understand.
+**Pug** is a clean, white space/ indentation sensitive syntax for writing HTML for Node.js. Pug allows you to write dynamic and resuable HTML documents Pug is a preprocessor, so you can use it to wrap repetitive code for mulitple uses (e.g. extending base templates).
+
+
+
+
+
+ Youcan write much simpler Pug code and the Pug compiler will compile that into HTML code that the browser can understand.
 
 With Pug, you can cut down the amount of code your write compared to vanilla HTML and even other template engines like EJS.  Pug features conditions, loops, etc and supports JavaScript natively to format HTML code. 
 
 Pug is also written in a paragraphical style (see example above) which can help improve readability in your code. For instance, the tag name is the first thing in a line and the rest is just the content inside it, which essentially means you dont need to completely wrap elements in tags. For example, heres a paragraph element in both HTML and Pug for comparison. 
+
+An HTML document that looks like this:
 ```html
-    <p>Hello there fellow pug user!</p>                        <!--HTML-->
+    <!DOCTYPE html>  
+    <html lang="en">  
+        <head>
+            <title>Cakes of the world</title>
+        </head>
+        <body>
+            <h1>Cakes in Sweden</h1>
+            <div class="container">
+            <p>Cakes from Sweden are amazing!</p>
+            </div>
+        </body>
+    </html>
 ```
+Would translate to this in Pug:
 ```pug
-    p Hello there fellow pug user!                             <!--Pug--> 
+    doctype html  
+    html(lang='en')  
+        head
+            title Cakes of the world
+        body
+            h1 Cakes in Sweden
+            div.container
+                p Cakes from Sweden are amazing!
 ```
+
+
 However, there are a few drawbacks to the Pug templating engine.  
 
 First, you need to very careful with whitespace, as an extra space can mess up the rest of your code. Second, any HTML that you wish to bring into your pug file needs to be converted for use in a .pug file.  
@@ -79,41 +106,7 @@ To create a view using pug, you simply need to create a file inside your view fo
 
 **STEP 5: Extend a base template**
 
-Suppose you are creating multiple pages and you have an element that you want to use on all your pages.  You could repeat the same lines of code over again, but pug allows you to have a seperate Pug document and *extend* it to the document you want to use it on.  Pug supports *template inheritance* with works with *extends* and *block*.  In a template, a **block** is just a peice of code that the child template will replace.
-
-
-
-
-
-
-
-
-For example, suppose we have a nav element that goes on the top of multiple pages. 
-
-
-
-
-First, create a new ```.pug``` file with the desired code you want to replicate.  In the case of the example below, we'll call this "layout.pug"
-```pug
-doctype html                                             
-    html
-    head
-        title this is a pug layout to extend
-    body
-        h1 Check this out, an extended layout!   
-```
-
-Second, write ``` extends layout``` so that you can import the module to your page.pug file.  Then 
-```pug
-    extends layouts
-
-    block content
-        h1 This is the main pug page.
-```
-
-
-
-
+Suppose you are creating multiple pages and you have an element that you want to use on all your pages.  You could repeat the same lines of code over again, but pug allows you to have a seperate Pug document and *extend* it to the document you want to use it on.  Pug supports *template inheritance* with works with *extends* and *block*.  In a template, a **block** is just a peice of code that the child template will replace. **Extends** simply links the module to the file you wish to import code from.
 
 </dd>
 
