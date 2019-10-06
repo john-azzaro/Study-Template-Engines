@@ -46,24 +46,37 @@ It is important to note that Pug was orginally called Jade, but due to copyright
 ### How do you use Pug?
 --------------------------
 **STEP 1: Load the Pug npm package**
+
 To do this, you can install the npm package to your package.json file.
 ```
     npm install pug
 ```
 
 **STEP 2: Setup the Pug view engine in server.js**
+
 First, we need to tell express to use Pug as the templating engine.
 Second, we need to tell pug where the template files will be, passing in the location as the first parameter and the second parameter the directory.
 ```JavaScript
-    app.set('view engine', 'pug');                         // use pug as the template engine...                   
-    app.set('views', path.join(__dirname, 'views'));       // tell pug where the template files will be.                
+    app.set('view engine', 'pug');                         // use pug as the template engine.  
+    app.set('views', path.join(__dirname, 'views'));       // tell pug where the template files will be.
 ```
 
 **STEP 3: Create a "views" folder to hold your pug files**
+
 This folder will hold all of your static ```.pug``` files.
 ```
     views
 ```
+
+**STEP 4: Create a ```.pug``` for your view**
+
+To create a view using pug, you simply need to create a file inside your view folder with the ``` .pug``` file type.
+```pug
+    h1 How Using Pug Saved My Sanity
+        p This is a paragraph that was carefully tab formatted otherwise would result in errors.
+```
+
+
 
 
 
