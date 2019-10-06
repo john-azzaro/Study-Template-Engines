@@ -1,19 +1,20 @@
 # Template Engines Study
 
 <br>
+A *template engine* allows you to replace variables in your files with acutal values, and then send the resulting HTML string to the clinet.  Express apps are capable of handling server-side template engines whihc can add data to a *view* and generate that HTML dynamically.
 
 Here's some questions covered in the study:
 
-* [What is a Template Engines?](#)
+
 
 <br>
 
-## What is a Template Engines?
-A *template engine* allows you to replace variables in your files with acutal values, and then send the resulting HTML string to the clinet.  Express apps are capable of handling server-side template engines whihc can add data to a *view* and generate that HTML dynamically.
+## What template engines are available for Node.js?
+There are wide range of templating engines for Node.js. More templating engines will be added to the list at a later list, but here are some covered in this study:
+
+* [Pug](#Pug)
 
 <br>
-
-## What template engines are available for JavaScript?
 
 <dl>
 
@@ -76,6 +77,39 @@ To create a view using pug, you simply need to create a file inside your view fo
         p This is a paragraph that was carefully tab formatted otherwise would result in errors.
 ```
 
+**STEP 5: Extend a base template**
+
+Suppose you are creating multiple pages and you have an element that you want to use on all your pages.  You could repeat the same lines of code over again, but pug allows you to have a seperate Pug document and *extend* it to the document you want to use it on.  Pug supports *template inheritance* with works with *extends* and *block*.  In a template, a **block** is just a peice of code that the child template will replace.
+
+
+
+
+
+
+
+
+For example, suppose we have a nav element that goes on the top of multiple pages. 
+
+
+
+
+First, create a new ```.pug``` file with the desired code you want to replicate.  In the case of the example below, we'll call this "layout.pug"
+```pug
+doctype html                                             
+    html
+    head
+        title this is a pug layout to extend
+    body
+        h1 Check this out, an extended layout!   
+```
+
+Second, write ``` extends layout``` so that you can import the module to your page.pug file.  Then 
+```pug
+    extends layouts
+
+    block content
+        h1 This is the main pug page.
+```
 
 
 
@@ -84,24 +118,4 @@ To create a view using pug, you simply need to create a file inside your view fo
 </dd>
 
 
-
-<br>
-
-### EJS
--------
-<dd>
-
-**EJS** is a HTML templating engine for Node.js
-
-</dd>
-
-
-
-
-
-</dl>
-
-
-
-<br>
 
