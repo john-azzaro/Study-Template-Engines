@@ -31,9 +31,13 @@ Pug takes the tag name as the first thing in a line and the rest is just the con
 ```
 However, there are a few drawbacks to the Pug templating engine.  
 
+<dd>
+
 First, you need to very careful with whitespace, as an extra space can mess up the rest of your code.  
 
 Second, any HTML that you wish to bring into your pug file needs to be converted for use in a .pug file.  
+
+</dd>
 
 Note that Pug was orginally called Jade, but due to copyright issues, it was changed to Pug around 2016. This is important to keep this in mind because when you install Express, Jade will be installed by default for backward compatibility reasons.
 
