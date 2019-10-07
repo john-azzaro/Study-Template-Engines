@@ -56,23 +56,37 @@ If you want STATIC FILES, you need to install the path module and use a "public"
 
 
 
-However, IF YOU WANT TO USE PUG (which is why you are here)....
+However, IF YOU WANT TO USE PUG (which is what we've all been waiting for after all this setup)....
 
-
-
-
-
-
-
-
-
-8. Install the "Pug" dependency and body-parser
--- Note that pug will allow us to use the pug template engine and body-parser will allow us to parse different types of data (if we need it for this project but install it just in case)
+9. Install the "Pug" dependency and body-parser
+-- Note that pug will allow us to use the pug template engine.
 ---------------------------
-    npm install pug body-parser
+    npm install pug 
 ---------------------------
 
-9. 
+10. Setup the view engine
+-------------------------------------
+    app.set('views', path.join(__dirname, 'views'));               /* This tells pug where the template files will be. and we pass 'views' as the first param and second param use path.join (normalize al args into a path string) is the location (directory name is "views") */       
+    app.set('view engine', 'pug')                                  /* this tells express to use the pug view "templating" engine*/
+-------------------------------------
+
+11. Create a "views" folder to put your .pug files
+---------------------------
+    pug
+--------------------------- 
+
+12. create a route to render the pug files
+-----------------------------------------------------
+app.get('/', function(req, res) {                                   // for home route, render the index.pug file.
+    res.render('index');
+});
+-----------------------------------------------------
+
+13. Create a pug file to serve as your home page
+-- in this case, it will be index.pug (see the res.render('index'))
+--------------------------------------------------------------------
+    h1 This is an example of the pug templating
+--------------------------------------------------------------------
 
 
 
