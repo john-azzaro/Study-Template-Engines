@@ -1,0 +1,23 @@
+{
+  "name": "study-template-engines",
+  "version": "1.0.0",
+  "description": "A study in templating engines",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-azzaro/Study-Template-Engines.git"
+  },
+  "author": "john azzaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-azzaro/Study-Template-Engines/issues"
+  },
+  "homepage": "https://github.com/john-azzaro/Study-Template-Engines#readme"
+}
