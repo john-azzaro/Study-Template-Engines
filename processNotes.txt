@@ -10,6 +10,28 @@ Process notes for Template engine Study
 6. Setup server scripts to run nodemon  
     "devStart": "nodemon server.js"
 
+7. Install a basic server.
+-------------------------------------------------------------------------------
+const express = require('express');                 // load express module
+
+const app = express();                              // initialize app by calling express and storing as "app"
+
+app.listen(process.env.PORT || 3000, function() {
+    console.log(`Your app is listening on ${process.env.PORT || 3000}...`);        // listen for client requests 
+})
+-------------------------------------------------------------------------------
+
+8. Install the "Pug" dependency
+---------------------------
+    npm install pug
+---------------------------
 
 
-5. Install a basic server.
+
+
+
+
+8. Create a GET route for the main page that we will use for the Template engine development
+---------------------------------------------------
+
+---------------------------------------------------

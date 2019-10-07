@@ -4,7 +4,8 @@
   "description": "A study in templating engines",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {
