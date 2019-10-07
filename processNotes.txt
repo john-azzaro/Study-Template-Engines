@@ -31,7 +31,33 @@ Process notes for Template engine Study
 ---------------------------------------------------
 
 
-9. Install body-parser.
+
+So heres where thigs diverge... You can go with a template engine (i.e. pug) or you can go with static HTML files.
+
+If you want STATIC FILES, you need to install the path module and use a "public" folder....  
+
+    Install the "path" module...
+    -- load the path module (note: since this is a root module, you dont need to list in dependencies) 
+    -----------------------------------------------------
+        const path = require('path');
+    -----------------------------------------------------
+
+    Use the public folder...
+    -----------------------------------------------------
+        app.use(express.static(path.join(__dirname + '/public')));
+    -----------------------------------------------------
+
+    Create a "public" folder
+    ------------------------------
+        public
+    ------------------------------
+
+    And thats pretty much it.  You dont need individual routes because now the server is set to serve content from inside the /public folder.
+
+
+
+However, IF YOU WANT TO USE PUG (which is why you are here)....
+
 
 
 
