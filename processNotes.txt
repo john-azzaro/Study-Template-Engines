@@ -1,0 +1,8 @@
+Process notes for Template engine Study
+=======================================
+
+1. npm init
+2. npm install express
+3. create .gitignore and add node_modules
+4. git init (and from here assume all steps are version controlled)
+5. Install a basic server.
