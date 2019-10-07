@@ -12,26 +12,43 @@ Process notes for Template engine Study
 
 7. Install a basic server.
 -------------------------------------------------------------------------------
-const express = require('express');                 // load express module
+    const express = require('express');                 // load express module
 
-const app = express();                              // initialize app by calling express and storing as "app"
+    const app = express();                              // initialize app by calling express and storing as "app"
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log(`Your app is listening on ${process.env.PORT || 3000}...`);        // listen for client requests 
-})
+    app.listen(process.env.PORT || 3000, function() {
+        console.log(`Your app is listening on ${process.env.PORT || 3000}...`);        // listen for client requests 
+    })
 -------------------------------------------------------------------------------
-
-8. Install the "Pug" dependency
----------------------------
-    npm install pug
----------------------------
-
-
-
-
 
 
 8. Create a GET route for the main page that we will use for the Template engine development
+-- Note in this route, I always like to start out with a small message to make sure everything is connected.
+---------------------------------------------------
+    app.get('/', function(req, res) {
+        res.send('Hello there fellow human')
+    })
 ---------------------------------------------------
 
----------------------------------------------------
+
+9. Install body-parser.
+
+
+
+
+
+
+
+
+8. Install the "Pug" dependency and body-parser
+-- Note that pug will allow us to use the pug template engine and body-parser will allow us to parse different types of data (if we need it for this project but install it just in case)
+---------------------------
+    npm install pug body-parser
+---------------------------
+
+9. 
+
+
+
+
+
