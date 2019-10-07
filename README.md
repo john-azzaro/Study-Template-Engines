@@ -8,9 +8,10 @@ A *template engine* allows you to replace variables in your files with acutal va
 <br>
 
 ## What template engines are available for Node.js?
-There are wide range of templating engines for Node.js. More templating engines will be added to the list at a later list, but here are some covered in this study:
+There are wide range of templating engines for Node.js. More templating engines will be added, but here are the few covered in this study:
 
 * [Pug](#Pug)
+* [EJS](#EJS) *(Coming soon)*
 
 <br>
 
