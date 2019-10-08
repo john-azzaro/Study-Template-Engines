@@ -24,17 +24,13 @@ There are wide range of templating engines for Node.js. More templating engines 
 ### What is Pug?
 -----------------
 
-**Pug** is a clean, white space/ indentation sensitive syntax for writing HTML for Node.js. Pug allows you to write dynamic and resuable HTML documents Pug is a preprocessor, so you can use it to wrap repetitive code for mulitple uses (e.g. extending base templates).
+**Pug** is a clean, white space/indentation sensitive syntax for writing HTML for Node.js. Pug allows you to write dynamic and reusable HTML documents. Pug is a *preprocessor*, so you can use it to wrap repetitive code for mulitple uses (e.g. extending base templates, etc).
 
+With Pug, you can cut down the amount of code your write compared to vanilla HTML (and even other template engines like EJS).  Additionally, Pug features conditions, loops, etc and supports JavaScript natively to format HTML code. 
 
+Pug is also written in a paragraphical style (see example below) which can help improve readability in your code. For instance, a tag name would be the first thing in line and everything else that follows is just the content inside it, which essentially means you dont need to completely wrap elements in tags. 
 
-
-
- Youcan write much simpler Pug code and the Pug compiler will compile that into HTML code that the browser can understand.
-
-With Pug, you can cut down the amount of code your write compared to vanilla HTML and even other template engines like EJS.  Pug features conditions, loops, etc and supports JavaScript natively to format HTML code. 
-
-Pug is also written in a paragraphical style (see example above) which can help improve readability in your code. For instance, the tag name is the first thing in a line and the rest is just the content inside it, which essentially means you dont need to completely wrap elements in tags. For example, heres a paragraph element in both HTML and Pug for comparison. 
+For example, heres a paragraph element in both HTML and Pug for comparison. 
 
 An HTML document that looks like this:
 ```html
