@@ -111,3 +111,25 @@ Suppose you are creating multiple pages and you have an element that you want to
 
 ### What is EJS?
 **EJS** or *Embedded JavaScript Templating* is a templating engine used by Node. EJS hels create HTML templates with minimal coding and can also inject data into HTML at the client side to produce the final HTML result and also helps embed JavaScript into HTML pages.
+
+Note that in most ways, installing and using EJS is much the same as installing and running Pug, so the information may overlap.
+
+<br>
+
+### How do you use EJS?
+---------------------------
+**STEP 1: Load the EJS npm package**
+
+To do this, you need to do an npm install of the EJS library in your project folder.
+```
+    npm install ejs
+```
+
+**STEP 2: Setup the EJS view engine in server.js**
+First, we tell express to use EJS as the view engine, and then tell EJS where the files will be.
+```JavaScript
+    app.set('view engine', 'ejs');                         // use EJS as the template engine.  
+    app.set('views', path.join(__dirname, 'views'));       // tell EJS where the template files will be.
+```
+
+**STEP 3: Create a views folder for your EJS files**
