@@ -108,6 +108,12 @@ Suppose you are creating multiple pages and you have an element that you want to
 </dd>
 
 <br>
+<br>
+<br>
+
+## EJS
+
+<dd>
 
 ### What is EJS?
 **EJS** or *Embedded JavaScript Templating* is a templating engine used by Node. EJS hels create HTML templates with minimal coding and can also inject data into HTML at the client side to produce the final HTML result and also helps embed JavaScript into HTML pages.
@@ -119,7 +125,6 @@ Note that in most ways, installing and using EJS is much the same as installing 
 ### How do you use EJS?
 ---------------------------
 **STEP 1: Load the EJS npm package**
-
 To do this, you need to do an npm install of the EJS library in your project folder.
 ```
     npm install ejs
@@ -133,3 +138,34 @@ First, we tell express to use EJS as the view engine, and then tell EJS where th
 ```
 
 **STEP 3: Create a views folder for your EJS files**
+This is the folder that will hold the static EJS files.
+```
+    views
+```
+
+**Create a .ejs file for your view**
+With EJS, its as simple as writing the code that pertains to the parts of HTML that you want to use in your app over and over again. For example, you could have a simple boilerplate. So first, you need to create an .ejs file such as "welcomePage.ejs". Note that what is in this file can be used over and over again in using the templating engine.
+```HTML
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome Page</title>
+    </head>
+    <body>
+        <h1> Hello there visitor! </h1>
+    </body>
+    </html>
+```
+
+**Insert variables and code with the ejs marker**
+Using EJS markers can insert code into your template. This marker consists of two tags, a ```<%= ``` tag followed by your variable or code and closed with a ```%>``` tag. In the case of the example below, we want to pass in a "greetingName" to show the name of our visitor. The code will be elsewhere but this is just to give a sense of what the marker will look like.
+```HTML
+    <h1>Hellow there <%= greetingName %> </h1>
+```
+
+**Use res.render() to use the template**
+
+</dl>
