@@ -166,6 +166,14 @@ Using EJS markers can insert code into your template. This marker consists of tw
     <h1>Hellow there <%= greetingName %> </h1>
 ```
 
-**Use res.render() to use the template**
+**Use res.render() to use the template!**
+So back in your server.js file, you would use ```res.render``` and pass in the name of the EJS file and then an object with a key/value pair. The key needs to match the variable name (i.e. greetingName).   So basically this is saying render a file called "welcomePage" and pass that file a variable called "greetingName" which would be the variable corresponding to the value you want to pass to the template.
+```JavaScript
+    app.get("/", function(req, res) {
+        ...
+        ...
+        res.render("welcomePage", {greetingName: helloCode})
+    })
+```
 
 </dl>
