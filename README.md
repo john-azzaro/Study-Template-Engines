@@ -107,5 +107,7 @@ Suppose you are creating multiple pages and you have an element that you want to
 
 </dd>
 
+<br>
 
-
+### What is EJS?
+**EJS** or *Embedded JavaScript Templating* is a templating engine used by Node. EJS hels create HTML templates with minimal coding and can also inject data into HTML at the client side to produce the final HTML result and also helps embed JavaScript into HTML pages.

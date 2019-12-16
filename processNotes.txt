@@ -91,4 +91,9 @@ app.get('/', function(req, res) {                                   // for home 
 
 
 
+// Resources
+==========================
+https://www.geeksforgeeks.org/use-ejs-as-template-engine-in-node-js/  -- EJS
+
+
 
